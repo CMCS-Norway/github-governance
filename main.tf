@@ -21,9 +21,9 @@ resource "github_team" "all_users" {
   privacy     = "closed"
 }
 
-resource "github_team" "devops" {
-  name        = "DevOps"
-  description = "DevOps team members."
+resource "github_team" "platform" {
+  name        = "platform"
+  description = "platform team members."
   privacy     = "closed"
 }
 
