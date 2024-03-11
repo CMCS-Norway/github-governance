@@ -29,14 +29,14 @@ locals {
   ])
 
   devops = toset([
-    "antnsn",              # Marius
-    "maos999",              # Marius 
-    "johnrosbe",           # John Roy 
-    "MrNewgarden",         # Kim  
-    "Flowlance",           # Daniel  
-    "FredrikMelby",        # Fredrik 
-    "xQseb",       # Sebastian
-    "fabskab",    # Fabrizio
-    "KA-T1",      # Karl
+    "antnsn",       # Marius
+    "maos999",      # Marius 
+    "johnrosbe",    # John Roy 
+    "MrNewgarden",  # Kim  
+    "Flowlance",    # Daniel  
+    "FredrikMelby", # Fredrik 
+    "xQseb",        # Sebastian
+    "fabskab",      # Fabrizio
+    "KA-T1",        # Karl
   ])
 }
