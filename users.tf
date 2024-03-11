@@ -14,18 +14,18 @@ locals {
 
 
   users = toset([
-    "Danielbj01",          # Daniel 
-    "CMCS-PerH", # Per Helge
-    "emilihoo",  # Emil 
-    "fabskab",   # Fabrizio
-    "Hawolex",   # Steffen 
-    "irean",     # Sandra 
-    "jenaslak",  # Jens 
-    "KA-T1",     # Karl 
-    "kojarB",    # Kojar  
-    "trymhaak",  # Trym 
-    "vagnes",    # Maxine
-    "xQseb"      # Sebastian
+    "Danielbj01", # Daniel 
+    "CMCS-PerH",  # Per Helge
+    "emilihoo",   # Emil 
+    "fabskab",    # Fabrizio
+    "Hawolex",    # Steffen 
+    "irean",      # Sandra 
+    "jenaslak",   # Jens 
+    "KA-T1",      # Karl 
+    "kojarB",     # Kojar  
+    "trymhaak",   # Trym 
+    "vagnes",     # Maxine
+    "xQseb"       # Sebastian
   ])
 
 }
