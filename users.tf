@@ -7,7 +7,6 @@ locals {
     "MrNewgarden",         # Kim  
     "Flowlance",           # Daniel  
     "FredrikMelby",        # Fredrik 
-    "Danielbj01",          # Daniel 
     "GlennIsb",            # Glenn 
     "johnrosbe",           # John Roy 
     "maos999"              # Marius 
@@ -15,17 +14,18 @@ locals {
 
 
   users = toset([
-    "CMCS-PerH", # Per Helge
-    "emilihoo",  # Emil 
-    "fabskab",   # Fabrizio
-    "Hawolex",   # Steffen 
-    "irean",     # Sandra 
-    "jenaslak",  # Jens 
-    "KA-T1",     # Karl 
-    "kojarB",    # Kojar  
-    "trymhaak",  # Trym 
-    "vagnes",    # Maxine
-    "xQseb"      # Sebastian
+    "CMCS-PerH",  # Per Helge
+    "Danielbj01", # Daniel 
+    "emilihoo",   # Emil 
+    "fabskab",    # Fabrizio
+    "Hawolex",    # Steffen 
+    "irean",      # Sandra 
+    "jenaslak",   # Jens 
+    "KA-T1",      # Karl 
+    "kojarB",     # Kojar  
+    "trymhaak",   # Trym 
+    "vagnes",     # Maxine
+    "xQseb"       # Sebastian
   ])
 
 }
