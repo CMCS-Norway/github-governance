@@ -21,9 +21,22 @@ resource "github_team" "all_users" {
   privacy     = "closed"
 }
 
+resource "github_team" "devops" {
+  name        = "DevOps"
+  description = "DevOps team members."
+  privacy     = "closed"
+}
+
 resource "github_team_membership" "all_users" {
   for_each = setunion(local.users, local.admins)
   username = each.key
   role     = contains(local.admins, each.key) ? "maintainer" : "member"
   team_id  = github_team.all_users.id
+}
+
+resource "github_team_membership" "devops" {
+  for_each = setunion(local.devops)
+  username = each.key
+  role     = contains(local.devops, each.key) ? "maintainer" : "member"
+  team_id  = github_team.devops.id
 }
