@@ -2,15 +2,15 @@ locals {
   admins = toset([
     "AndersLevin-GroupIT",  # Anders Levin - Fra group, må være der pga lisens
     "molldk",               # Klaus Møllnitz - Fra group, må være der pga lisens
-    "Tjacsen",              # Tore Jacobsen
-    "antnsn",               # Marius Antonsen
-    "MrNewgarden",          # Kim Andrè Nyhagen
-    "Flowlance",            # Daniel Odwin Sørensen
-    "FredrikMelby",         # Fredrik Melby
-    "Danielbj01",           # Daniel Johansen
-    "GlennIsb",             # Glenn Isberg
-    "johnrosbe",            # John Roy Røsberg
-    "maos999"               # Marius Aamodt
+    "Tjacsen",              # Tore 
+    "antnsn",               # Marius
+    "MrNewgarden",          # Kim  
+    "Flowlance",            # Daniel  
+    "FredrikMelby",         # Fredrik 
+    "Danielbj01",           # Daniel 
+    "GlennIsb",             # Glenn 
+    "johnrosbe",            # John Roy 
+    "maos999"               # Marius 
   ])
 
 
@@ -18,14 +18,14 @@ locals {
     "CMCS-PerH",            # Per Helge
     "emilihoo",             # Emil 
     "fabskab",              # Fabrizio
-    "Hawolex",              # Steffen Skui
-    "irean",                # Sandra Saluti
-    "jenaslak",             # Jens Aslaksen
-    "KA-T1",                # Karl Tvergrov
-    "kojarB",               # Kojar Baban 
-    "trymhaak",             # Trym Håkansson
-    "vagnes",               # Maxine B. Vågnes
-    "xQseb"                # Sebastian
+    "Hawolex",              # Steffen 
+    "irean",                # Sandra 
+    "jenaslak",             # Jens 
+    "KA-T1",                # Karl 
+    "kojarB",               # Kojar  
+    "trymhaak",             # Trym 
+    "vagnes",               # Maxine
+    "xQseb"                 # Sebastian
   ])
 
 }
