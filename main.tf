@@ -37,6 +37,6 @@ resource "github_team_membership" "all_users" {
 resource "github_team_membership" "platform" {
   for_each = setunion(local.platform)
   username = each.key
-  role     = contains(local.platform, each.key) ? "maintainer" : "member"
+  role     = contains(local.admins, each.key) ? "maintainer" : "member"
   team_id  = github_team.platform.id
 }
