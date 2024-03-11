@@ -1,7 +1,7 @@
 /*
 * # Governance
 *
-* This is a repository for managing our GitHub organization. Anyone from Fortytwo can add members through a pull request, and any member can approve it.
+* This is a repository for managing our GitHub organization. Anyone from CMCS can add members through a pull request, and any member can approve it.
 */
 
 resource "github_membership" "admin" {
