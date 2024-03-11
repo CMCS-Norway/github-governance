@@ -3,8 +3,8 @@ locals {
     "AndersLevin-GroupIT", # Anders - Fra group
     "molldk",              # Klaus  - Fra group
     "Tjacsen",             # Tore 
-    "antnsn",              # Marius
-    "MrNewgarden",         # Kim  
+    "antnsn"              = "devops"; # Marius
+    "MrNewgarden"         = "devops"; # Kim  
     "Flowlance",           # Daniel  
     "FredrikMelby",        # Fredrik 
     "GlennIsb",            # Glenn 
@@ -28,7 +28,7 @@ locals {
     "xQseb"       # Sebastian
   ])
 
-  devops = toset([
+  platform = toset([
     "antnsn",       # Marius
     "maos999",      # Marius 
     "johnrosbe",    # John Roy 
