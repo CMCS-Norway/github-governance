@@ -28,7 +28,7 @@ locals {
     "xQseb"       # Sebastian
   ])
 
-  devops = toset([
+  platform = toset([
     "antnsn",       # Marius
     "maos999",      # Marius 
     "johnrosbe",    # John Roy 
