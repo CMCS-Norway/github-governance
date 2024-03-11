@@ -14,8 +14,8 @@ locals {
 
 
   users = toset([
-    "Danielbj01", # Daniel 
     "CMCS-PerH",  # Per Helge
+    "Danielbj01", # Daniel 
     "emilihoo",   # Emil 
     "fabskab",    # Fabrizio
     "Hawolex",    # Steffen 
