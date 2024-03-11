@@ -7,7 +7,6 @@ locals {
     "MrNewgarden",         # Kim  
     "Flowlance",           # Daniel  
     "FredrikMelby",        # Fredrik 
-    "Danielbj01",          # Daniel 
     "GlennIsb",            # Glenn 
     "johnrosbe",           # John Roy 
     "maos999"              # Marius 
@@ -15,6 +14,7 @@ locals {
 
 
   users = toset([
+    "Danielbj01",          # Daniel 
     "CMCS-PerH", # Per Helge
     "emilihoo",  # Emil 
     "fabskab",   # Fabrizio
