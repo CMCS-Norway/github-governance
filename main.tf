@@ -5,15 +5,16 @@
 */
 
 resource "github_membership" "admin" {
-  for_each = local.admins
+  for_each = { for key, user in local.users : key => user if user.owner }
   username = each.key
   role     = "admin"
 }
 
 resource "github_membership" "users" {
-  for_each = local.users
+  for_each = { for key, user in local.users : key => user if !user.owner }
   username = each.key
 }
+
 
 resource "github_team" "all_users" {
   name        = "All Users"
@@ -21,22 +22,25 @@ resource "github_team" "all_users" {
   privacy     = "closed"
 }
 
-resource "github_team" "platform" {
-  name        = "platform"
-  description = "platform team members."
+resource "github_team" "devops" {
+  name        = "DevOps"
+  description = "devops team members."
   privacy     = "closed"
 }
 
 resource "github_team_membership" "all_users" {
-  for_each = setunion(local.users, local.admins)
+  for_each = local.users
   username = each.key
-  role     = contains(local.admins, each.key) ? "maintainer" : "member"
+  role     = each.value.owner ? "maintainer" : "member"
   team_id  = github_team.all_users.id
 }
 
-resource "github_team_membership" "platform" {
-  for_each = setunion(local.platform)
+
+resource "github_team_membership" "devops" {
+  for_each = local.users
   username = each.key
-  role     = contains(local.platform, each.key) ? "maintainer" : "member"
-  team_id  = github_team.platform.id
+  role = each.value.owner ? "maintainer" : (
+    each.value.devops ? "maintainer" : "member"
+  )
+  team_id = github_team.devops.id
 }
