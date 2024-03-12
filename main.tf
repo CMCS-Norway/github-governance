@@ -45,18 +45,17 @@ resource "github_team_membership" "all_users" {
 resource "github_team_membership" "devops" {
   for_each = { for key, user in local.users : key => user if user.devops || user.owner }
   username = each.key
-  role     = each.value.owner && each.value.devops ? "maintainer" : (
+  role = each.value.owner && each.value.devops ? "maintainer" : (
     each.value.devops ? "member" : ""
   )
-  team_id  = github_team.devops.id
+  team_id = github_team.devops.id
 }
-
 
 resource "github_team_membership" "security" {
   for_each = { for key, user in local.users : key => user if user.security || user.owner }
   username = each.key
-  role     = each.value.owner && each.value.security ? "maintainer" : (
+  role = each.value.owner && each.value.security ? "maintainer" : (
     each.value.security ? "member" : ""
   )
-  team_id  = github_team.security.id
+  team_id = github_team.security.id
 }
