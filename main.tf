@@ -52,7 +52,7 @@ resource "github_team_membership" "devops" {
 }
 
 
-resource "github_team_membership" "devops" {
+resource "github_team_membership" "security" {
   for_each = { for key, user in local.users : key => user if user.security || user.owner }
   username = each.key
   role     = each.value.owner && each.value.security ? "maintainer" : (
