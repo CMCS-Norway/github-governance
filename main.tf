@@ -23,10 +23,17 @@ resource "github_team" "all_users" {
 }
 
 resource "github_team" "devops" {
-  name        = "DevOps"
-  description = "devops team members."
+  name        = "platform"
+  description = "platform team members."
   privacy     = "closed"
 }
+
+resource "github_team" "security" {
+  name        = "Security"
+  description = "Security team members."
+  privacy     = "closed"
+}
+
 
 resource "github_team_membership" "all_users" {
   for_each = local.users
@@ -35,12 +42,20 @@ resource "github_team_membership" "all_users" {
   team_id  = github_team.all_users.id
 }
 
-
 resource "github_team_membership" "devops" {
   for_each = local.users
   username = each.key
-  role = each.value.owner ? "maintainer" : (
-    each.value.devops ? "maintainer" : "member"
+  role = each.value.owner && each.value.devops ? "maintainer" : (
+    each.value.devops ? "member" : "member"
   )
   team_id = github_team.devops.id
+}
+
+resource "github_team_membership" "security" {
+  for_each = local.users
+  username = each.key
+  role = each.value.owner && each.value.security ? "maintainer" : (
+    each.value.security ? "member" : "member"
+  )
+  team_id = github_team.security.id
 }
