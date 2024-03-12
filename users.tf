@@ -1,42 +1,114 @@
 locals {
-  admins = toset([
-    "AndersLevin-GroupIT", # Anders - Fra group
-    "molldk",              # Klaus  - Fra group
-    "Tjacsen",             # Tore 
-    "antnsn",              # Marius
-    "MrNewgarden",         # Kim  
-    "Flowlance",           # Daniel  
-    "FredrikMelby",        # Fredrik 
-    "GlennIsb",            # Glenn 
-    "johnrosbe",           # John Roy 
-    "maos999"              # Marius 
-  ])
-
-
-  users = toset([
-    "CMCS-PerH",  # Per Helge
-    "Danielbj01", # Daniel 
-    "emilihoo",   # Emil 
-    "fabskab",    # Fabrizio
-    "Hawolex",    # Steffen 
-    "irean",      # Sandra 
-    "jenaslak",   # Jens 
-    "KA-T1",      # Karl 
-    "kojarB",     # Kojar  
-    "trymhaak",   # Trym 
-    "vagnes",     # Maxine
-    "xQseb"       # Sebastian
-  ])
-
-  platform = toset([
-    "antnsn",       # Marius
-    "maos999",      # Marius 
-    "johnrosbe",    # John Roy 
-    "MrNewgarden",  # Kim  
-    "Flowlance",    # Daniel  
-    "FredrikMelby", # Fredrik 
-    "xQseb",        # Sebastian
-    "fabskab",      # Fabrizio
-    "KA-T1",        # Karl
-  ])
+  users = {
+    "AndersLevin-GroupIT" = { # Anders - Fra group
+      owner    = true
+      devops   = false
+      security = false
+    }
+    "molldk" = { # Klaus - Fra group (Reference)
+      owner    = true
+      devops   = false
+      security = false
+    }
+    "Tjacsen" = { # Tore
+      owner    = true
+      devops   = false
+      security = false
+    }
+    "antnsn" = { # Marius
+      owner    = true
+      devops   = true
+      security = false
+    }
+    "MrNewgarden" = { # Kim
+      owner    = true
+      devops   = true
+      security = false
+    }
+    "Flowlance" = { # Daniel
+      owner    = true
+      devops   = true
+      security = false
+    }
+    "FredrikMelby" = { # Fredrik
+      owner    = true
+      devops   = true
+      security = false
+    }
+    "GlennIsb" = { # Glenn
+      owner    = true
+      devops   = false
+      security = false
+    }
+    "johnrosbe" = { # John Roy
+      owner    = true
+      devops   = true
+      security = false
+    }
+    "maos999" = { # Marius
+      owner    = true
+      devops   = true
+      security = false
+    }
+    "CMCS-PerH" = { # Per Helge
+      owner    = false
+      devops   = false
+      security = false
+    }
+    "Danielbj01" = { # Daniel
+      owner    = false
+      devops   = false
+      security = false
+    }
+    "emilihoo" = { # Emil
+      owner    = false
+      devops   = false
+      security = false
+    }
+    "fabskab" = { # Fabrizio
+      owner    = false
+      devops   = true
+      security = false
+    }
+    "Hawolex" = { # Steffen
+      owner    = false
+      devops   = false
+      security = false
+    }
+    "irean" = { # Sandra
+      owner    = false
+      devops   = false
+      security = true
+    }
+    "jenaslak" = { # Jens
+      owner    = false
+      devops   = false
+      security = false
+    }
+    "KA-T1" = { # Karl
+      owner    = false
+      devops   = true
+      security = false
+    }
+    "kojarB" = { # Kojar
+      owner    = false
+      devops   = false
+      security = true
+    }
+    "trymhaak" = { # Trym
+      owner    = false
+      devops   = false
+      security = true
+    }
+    "vagnes" = { # Maxine
+      owner    = false
+      devops   = false
+      security = true
+    }
+    "xQseb" = { # Sebastian
+      owner    = false
+      devops   = true
+      security = false
+    }
+  }
 }
