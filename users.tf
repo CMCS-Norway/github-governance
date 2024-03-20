@@ -55,16 +55,16 @@ locals {
       devops   = false
       security = false
     }
-    "Danielbj01" = { # Daniel
-      owner    = false
-      devops   = false
-      security = false
-    }
-    "emilihoo" = { # Emil
-      owner    = false
-      devops   = false
-      security = false
-    }
+    # "Danielbj01" = { # Daniel
+    #   owner    = false
+    #   devops   = false
+    #   security = false
+    # }
+    # "emilihoo" = { # Emil
+    #   owner    = false
+    #   devops   = false
+    #   security = false
+    # }
     "fabskab" = { # Fabrizio
       owner    = false
       devops   = true
@@ -75,11 +75,11 @@ locals {
       devops   = false
       security = true
     }
-    "jenaslak" = { # Jens
-      owner    = false
-      devops   = false
-      security = false
-    }
+    # "jenaslak" = { # Jens
+    #   owner    = false
+    #   devops   = false
+    #   security = false
+    # }
     "KA-T1" = { # Karl
       owner    = false
       devops   = true
