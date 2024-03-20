@@ -70,11 +70,6 @@ locals {
       devops   = true
       security = false
     }
-    "Hawolex" = { # Steffen
-      owner    = false
-      devops   = false
-      security = false
-    }
     "irean" = { # Sandra
       owner    = false
       devops   = false
